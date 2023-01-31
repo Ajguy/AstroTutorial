@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import '../styles/tequilla.css';
+
+const res = await fetch("https://tequilaaficionado.com/wp-json/wp/v2/posts?&_embed")
+const posts = await res.json()
+
+const pageTitle = "Wordpress Blog";
+---
+<BaseLayout pageTitle={pageTitle}>
+    {
+        posts.map((post) => (
+            <h2 set:html="post.title.rendered" />
+            <p set:html="post.content.rendered" />
+            <br>
+            <br>
+            <hr class="solid">
+        ))
+      
+    }
+</BaseLayout>

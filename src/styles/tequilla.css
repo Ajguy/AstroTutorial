@@ -1,0 +1,19 @@
+img {
+    max-width: 100%;
+}
+
+.embed-youtube {
+    max-width: 100%;
+}
+
+.has-text-align-center {
+    display: none!important;
+}
+
+.sharedaddy {
+    display: none;
+}
+
+#mc_embed_signup {
+    display: none;
+}
